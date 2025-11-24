@@ -1,0 +1,14 @@
+
+---
+
+## 📌 `docs/backend/models.md`
+
+```markdown
+# Models Principais
+
+## Usuário Customizado (`CustomUser`)
+
+```python
+class CustomUser(AbstractUser):
+    papel = models.CharField(max_length=50, default="aluno")
+    ativo = models.BooleanField(default=True)
