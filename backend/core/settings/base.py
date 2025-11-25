@@ -66,3 +66,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Define o modelo de usuário customizado
+AUTH_USER_MODEL = "accounts.CustomUser"
