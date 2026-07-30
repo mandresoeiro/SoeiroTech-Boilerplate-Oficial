@@ -7,28 +7,32 @@ Este guia mostra como criar um novo projeto a partir do SoeiroTech Django Boiler
 Use esta estrutura local para manter seus projetos organizados:
 
 ```text
-C:\dev\projects\django\
-  templates\
+C:\dev\django\
   active\
-  archive\
+  docs\
+  labs\
+  repos\
+  templates\
 ```
 
 Recomendacao:
 
-- `templates`: bases reutilizaveis.
 - `active`: projetos em andamento.
-- `archive`: projetos antigos ou pausados.
+- `docs`: documentacao geral.
+- `labs`: estudos e experimentos.
+- `repos`: repositorios clonados.
+- `templates`: bases reutilizaveis.
 
 O boilerplate pode ficar em:
 
 ```text
-C:\dev\projects\django\templates\SoeiroTech-Boilerplate-Oficial
+C:\dev\django\repos\SoeiroTech-Boilerplate-Oficial
 ```
 
 Projetos novos devem ficar em:
 
 ```text
-C:\dev\projects\django\active\nome-do-projeto
+C:\dev\django\active\nome-do-projeto
 ```
 
 ## 2. Copiar o Boilerplate
@@ -50,7 +54,7 @@ Exemplo:
 
 O script faz automaticamente:
 
-- cria a pasta `/mnt/c/dev/projects/django/active`;
+- cria a pasta `/mnt/c/dev/django/active`;
 - copia o boilerplate;
 - remove o `.git` antigo;
 - inicia um Git novo;
@@ -60,7 +64,7 @@ O script faz automaticamente:
 Depois, para subir:
 
 ```bash
-cd /mnt/c/dev/projects/django/active/gestao-clientes
+cd /mnt/c/dev/django/active/gestao-clientes
 git remote add origin https://github.com/mandresoeiro/gestao-clientes.git
 git push -u origin main
 ```
@@ -78,11 +82,11 @@ Nesse caso, o script cria o projeto, faz o commit inicial e ja executa o push.
 No PowerShell:
 
 ```powershell
-New-Item -ItemType Directory -Force C:\dev\projects\django\active
+New-Item -ItemType Directory -Force C:\dev\django\active
 
 Copy-Item -Recurse `
   C:\dev\django\repos\SoeiroTech-Boilerplate-Oficial `
-  C:\dev\projects\django\active\nome-do-projeto
+  C:\dev\django\active\nome-do-projeto
 ```
 
 Troque `nome-do-projeto` pelo nome real do projeto.
@@ -92,7 +96,7 @@ Exemplo:
 ```powershell
 Copy-Item -Recurse `
   C:\dev\django\repos\SoeiroTech-Boilerplate-Oficial `
-  C:\dev\projects\django\active\gestao-clientes
+  C:\dev\django\active\gestao-clientes
 ```
 
 ## 3. Remover o Git do Boilerplate
@@ -100,7 +104,7 @@ Copy-Item -Recurse `
 O projeto copiado ainda aponta para o repositorio do boilerplate. Remova o Git antigo:
 
 ```powershell
-cd C:\dev\projects\django\active\nome-do-projeto
+cd C:\dev\django\active\nome-do-projeto
 Remove-Item -Recurse -Force .git
 ```
 
@@ -133,7 +137,7 @@ description = "Sistema Django para gestao de clientes"
 No Ubuntu ou WSL:
 
 ```bash
-cd /mnt/c/dev/projects/django/active/nome-do-projeto/backend
+cd /mnt/c/dev/django/active/nome-do-projeto/backend
 cp .env.example .env
 poetry install
 poetry run python manage.py migrate
@@ -143,7 +147,7 @@ poetry run python manage.py runserver
 No PowerShell, se Python e Poetry estiverem instalados:
 
 ```powershell
-cd C:\dev\projects\django\active\nome-do-projeto\backend
+cd C:\dev\django\active\nome-do-projeto\backend
 Copy-Item .env.example .env
 poetry install
 poetry run python manage.py migrate
@@ -183,7 +187,7 @@ Se voce usou o script com a URL do GitHub, esta etapa ja foi feita.
 No PowerShell:
 
 ```powershell
-cd C:\dev\projects\django\active\nome-do-projeto
+cd C:\dev\django\active\nome-do-projeto
 git init
 git add -A
 git commit -m "Initial project from SoeiroTech Django boilerplate"

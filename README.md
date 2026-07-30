@@ -132,6 +132,12 @@ cd /mnt/c/dev/django/repos/SoeiroTech-Boilerplate-Oficial
 ./scripts/new-django-project.sh nome-do-projeto
 ```
 
+Os projetos criados ficam em:
+
+```text
+C:\dev\django\active\nome-do-projeto
+```
+
 Ou criando e subindo direto:
 
 ```bash

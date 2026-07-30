@@ -5,7 +5,7 @@ PROJECT_NAME="${1:-}"
 GITHUB_REMOTE="${2:-}"
 
 TEMPLATE_DIR="/mnt/c/dev/django/repos/SoeiroTech-Boilerplate-Oficial"
-PROJECTS_DIR="/mnt/c/dev/projects/django/active"
+PROJECTS_DIR="/mnt/c/dev/django/active"
 
 if [ -z "$PROJECT_NAME" ]; then
     echo "Uso:"
