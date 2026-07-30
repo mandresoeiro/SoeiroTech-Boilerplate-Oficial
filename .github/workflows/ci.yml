@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  quality:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.12"
+          - "3.13"
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Configure Poetry
+        run: poetry config virtualenvs.create true
+
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-ansi
+
+      - name: Check formatting
+        run: poetry run black --check .
+
+      - name: Check imports
+        run: poetry run isort --check-only .
+
+      - name: Lint
+        run: poetry run flake8 --config=../.flake8 .
+
+      - name: Django check
+        run: poetry run python manage.py check --settings=core.settings.test
+
+      - name: Check migrations
+        run: poetry run python manage.py makemigrations --check --dry-run --settings=core.settings.test
+
+      - name: Test
+        run: poetry run pytest

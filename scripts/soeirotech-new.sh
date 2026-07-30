@@ -1,39 +1,36 @@
-
-Conteúdo:
-
-```bash
 #!/usr/bin/env bash
+set -euo pipefail
 
-if [ -z "$1" ]; then
-    echo "❌ Informe o nome do projeto. Exemplo:"
-    echo "   ./soeirotech-new.sh academus"
+if [ -z "${1:-}" ]; then
+    echo "Informe o nome do projeto. Exemplo:"
+    echo "  ./soeirotech-new.sh meu-projeto"
     exit 1
 fi
 
-PROJECT=$1
+PROJECT="$1"
 
-echo "📁 Criando projeto: $PROJECT..."
-mkdir "$PROJECT"
+echo "Criando projeto: $PROJECT"
+mkdir -p "$PROJECT"
 
-echo "📦 Copiando backend..."
+echo "Copiando backend..."
 cp -r ../backend "$PROJECT/backend"
 
-echo "📚 Copiando documentação..."
+echo "Copiando documentacao..."
 cp -r ../docs "$PROJECT/docs"
 
-echo "🔧 Copiando scripts internos..."
-mkdir "$PROJECT/scripts"
-cp ./soeirotech-new.sh "$PROJECT/scripts"
+echo "Copiando scripts internos..."
+mkdir -p "$PROJECT/scripts"
+cp ./soeirotech-new.sh "$PROJECT/scripts/"
 
-echo "📦 Instalando dependências Poetry..."
-cd "$PROJECT/backend" || exit
+echo "Instalando dependencias Poetry..."
+cd "$PROJECT/backend"
 poetry install
 
 cp .env.example .env
 
 echo ""
-echo "🎉 Projeto criado!"
-echo "👉 cd $PROJECT/backend"
-echo "👉 poetry shell"
-echo "👉 python manage.py migrate"
-echo "👉 python manage.py runserver"
+echo "Projeto criado."
+echo "Proximos comandos:"
+echo "  cd $PROJECT/backend"
+echo "  poetry run python manage.py migrate"
+echo "  poetry run python manage.py runserver"
