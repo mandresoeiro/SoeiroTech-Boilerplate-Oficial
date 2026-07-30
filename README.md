@@ -125,6 +125,19 @@ Guia completo:
 docs/guia-criar-e-subir-projeto.md
 ```
 
+No WSL, o caminho rapido e:
+
+```bash
+cd /mnt/c/dev/django/repos/SoeiroTech-Boilerplate-Oficial
+./scripts/new-django-project.sh nome-do-projeto
+```
+
+Ou criando e subindo direto:
+
+```bash
+./scripts/new-django-project.sh nome-do-projeto https://github.com/mandresoeiro/nome-do-projeto.git
+```
+
 ## Testes
 
 ```bash

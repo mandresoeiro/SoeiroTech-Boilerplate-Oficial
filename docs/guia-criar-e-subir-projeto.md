@@ -33,6 +33,48 @@ C:\dev\projects\django\active\nome-do-projeto
 
 ## 2. Copiar o Boilerplate
 
+### Opcao Recomendada: Usar o Script
+
+No WSL, a forma mais simples e:
+
+```bash
+cd /mnt/c/dev/django/repos/SoeiroTech-Boilerplate-Oficial
+./scripts/new-django-project.sh nome-do-projeto
+```
+
+Exemplo:
+
+```bash
+./scripts/new-django-project.sh gestao-clientes
+```
+
+O script faz automaticamente:
+
+- cria a pasta `/mnt/c/dev/projects/django/active`;
+- copia o boilerplate;
+- remove o `.git` antigo;
+- inicia um Git novo;
+- cria o primeiro commit;
+- troca a branch para `main`.
+
+Depois, para subir:
+
+```bash
+cd /mnt/c/dev/projects/django/active/gestao-clientes
+git remote add origin https://github.com/mandresoeiro/gestao-clientes.git
+git push -u origin main
+```
+
+Tambem e possivel passar a URL do GitHub direto no comando:
+
+```bash
+./scripts/new-django-project.sh gestao-clientes https://github.com/mandresoeiro/gestao-clientes.git
+```
+
+Nesse caso, o script cria o projeto, faz o commit inicial e ja executa o push.
+
+### Opcao Manual
+
 No PowerShell:
 
 ```powershell
@@ -136,6 +178,8 @@ No GitHub:
 
 ## 8. Iniciar Git Novo e Subir
 
+Se voce usou o script com a URL do GitHub, esta etapa ja foi feita.
+
 No PowerShell:
 
 ```powershell
@@ -193,4 +237,3 @@ No GitHub, abra um Pull Request para `main`.
 - CI passa no GitHub.
 - Repositorio tem nome claro.
 - Projeto nao contem segredos, senhas ou arquivos `.env`.
-

@@ -12,6 +12,7 @@ Este documento registra melhorias, refatoracoes e boas praticas aplicadas ao pro
 - Alterado Dockerfile para usar `ubuntu:24.04`.
 - Adicionado guia `docs/ubuntu.md`.
 - Adicionado guia `docs/guia-criar-e-subir-projeto.md`.
+- Adicionado script `scripts/new-django-project.sh` para criar projetos novos a partir do boilerplate.
 - Adicionado Dependabot para dependencias Python e GitHub Actions.
 - Adicionado `core.settings.test` para execucao isolada de testes.
 - Adicionada configuracao do pytest no `pyproject.toml`.
