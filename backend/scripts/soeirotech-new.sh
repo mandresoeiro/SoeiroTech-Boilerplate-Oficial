@@ -1,9 +1,9 @@
-#!/bin/bash
-# Script de setup automatizado para o boilerplate Django
+#!/usr/bin/env bash
+set -euo pipefail
 
 poetry install
 poetry run python manage.py migrate
-poetry run python manage.py createsuperuser --noinput || true
 poetry run python manage.py collectstatic --noinput
 
-echo "Setup concluído! Acesse o admin para criar o usuário manualmente se necessário."
+echo "Setup concluido. Crie o superusuario com:"
+echo "  poetry run python manage.py createsuperuser"

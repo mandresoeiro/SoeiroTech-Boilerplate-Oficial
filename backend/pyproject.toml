@@ -1,13 +1,15 @@
 [tool.poetry]
-name = "academus"
+name = "soeirotech-django-boilerplate"
 version = "0.1.0"
-description = "Academus - Sistema de Gestão Educacional com Django"
+description = "Boilerplate profissional para projetos Django da SoeiroTech"
 authors = ["SoeiroTech <dev@soeiro.tech>"]
 license = "MIT"
-readme = "README.md"
+readme = "../README.md"
 packages = [
     { include = "core" },
-    { include = "accounts" }
+    { include = "accounts" },
+    { include = "api" },
+    { include = "dashboard" }
 ]
 
 [tool.poetry.dependencies]
@@ -20,7 +22,6 @@ dj-database-url = "^3.0.1"
 pillow = "^12.0.0"
 django-extensions = "^4.1"
 django-jazzmin = "^3.0.1"
-
 mkdocs = "^1.6.0"
 mkdocs-material = "^9.5.0"
 mkdocs-awesome-pages-plugin = "^2.9.2"
@@ -44,7 +45,16 @@ profile = "black"
 
 [tool.flake8]
 max-line-length = 88
-exclude = [".venv","__pycache__","migrations"]
+exclude = [".venv", "__pycache__", "migrations"]
+
+# A configuracao efetiva do flake8 tambem esta em ../.flake8, pois o flake8
+# padrao nao le pyproject.toml sem plugin adicional.
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.settings.test"
+python_files = ["test_*.py", "*_test.py", "tests.py"]
+testpaths = ["accounts", "api", "core", "dashboard"]
+addopts = "-ra"
 
 [build-system]
 requires = ["poetry-core"]

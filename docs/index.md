@@ -1,14 +1,22 @@
-# ⭐ Academus — Documentação Oficial
+# SoeiroTech Django Boilerplate
 
-Bem-vindo ao template oficial SoeiroTech™ para construção de sistemas Django + DRF + MkDocs.
+Bem-vindo a documentacao oficial do boilerplate Django da SoeiroTech.
 
 Use este template para criar novos projetos com:
 
 - Django 5
-- DRF moderno
-- Poetry 1.8+
+- Django REST Framework
+- Poetry
 - MkDocs Material
 - Estrutura profissional
-- Core como raiz
-- Accounts com usuário customizado
-- Scripts automáticos
+- Configuracoes por ambiente
+- App `accounts` com usuario customizado
+- Base para testes, Docker e CI/CD
+
+## Documentos principais
+
+- `engenharia-software.md`: documento de engenharia do projeto.
+- `roadmap.md`: proximas melhorias planejadas.
+- `backend/arquitetura.md`: visao da arquitetura backend.
+- `backend/apis.md`: padrao inicial para APIs.
+- `backend/models.md`: modelos principais.

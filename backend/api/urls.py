@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import HelloWorldView
+
+from .views import HealthCheckView, HelloWorldView
 
 urlpatterns = [
-    path('hello/', HelloWorldView.as_view(), name='api-hello'),
+    path("health/", HealthCheckView.as_view(), name="api-health"),
+    path("hello/", HelloWorldView.as_view(), name="api-hello"),
 ]
