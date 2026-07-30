@@ -33,6 +33,7 @@ nav:
   - Inicio: index.md
   - Engenharia de Software: engenharia-software.md
   - Roadmap: roadmap.md
+  - Ubuntu: ubuntu.md
   - Backend:
       - Arquitetura: backend/arquitetura.md
       - APIs: backend/apis.md

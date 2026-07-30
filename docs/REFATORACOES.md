@@ -8,6 +8,9 @@ Este documento registra melhorias, refatoracoes e boas praticas aplicadas ao pro
 
 - Adicionados `.python-version`, `.editorconfig` e `.gitattributes`.
 - Adicionado workflow de CI com matriz para Python 3.12 e 3.13.
+- Confirmado CI em `ubuntu-latest`.
+- Alterado Dockerfile para usar `ubuntu:24.04`.
+- Adicionado guia `docs/ubuntu.md`.
 - Adicionado Dependabot para dependencias Python e GitHub Actions.
 - Adicionado `core.settings.test` para execucao isolada de testes.
 - Adicionada configuracao do pytest no `pyproject.toml`.

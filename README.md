@@ -22,6 +22,7 @@ Este repositorio serve como ponto de partida para novos projetos Django da Soeir
 - Django REST Framework
 - Poetry
 - PostgreSQL via Docker Compose
+- Ubuntu 24.04 no Docker
 - MkDocs Material
 - Pytest
 - Black, isort e flake8
@@ -104,6 +105,16 @@ Para subir a aplicacao com banco PostgreSQL:
 ```bash
 cd backend
 docker compose up --build
+```
+
+O Dockerfile usa `ubuntu:24.04` como base.
+
+## Ubuntu
+
+Guia de ambiente Ubuntu/WSL:
+
+```text
+docs/ubuntu.md
 ```
 
 ## Testes

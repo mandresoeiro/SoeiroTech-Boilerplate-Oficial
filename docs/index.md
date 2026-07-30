@@ -17,6 +17,7 @@ Use este template para criar novos projetos com:
 
 - `engenharia-software.md`: documento de engenharia do projeto.
 - `roadmap.md`: proximas melhorias planejadas.
+- `ubuntu.md`: guia para rodar em Ubuntu, WSL e Docker.
 - `backend/arquitetura.md`: visao da arquitetura backend.
 - `backend/apis.md`: padrao inicial para APIs.
 - `backend/models.md`: modelos principais.
