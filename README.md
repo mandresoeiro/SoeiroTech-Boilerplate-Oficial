@@ -117,6 +117,14 @@ Guia de ambiente Ubuntu/WSL:
 docs/ubuntu.md
 ```
 
+## Criar e Subir um Novo Projeto
+
+Guia completo:
+
+```text
+docs/guia-criar-e-subir-projeto.md
+```
+
 ## Testes
 
 ```bash

@@ -31,6 +31,7 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
+  - Criar e Subir Projeto: guia-criar-e-subir-projeto.md
   - Engenharia de Software: engenharia-software.md
   - Roadmap: roadmap.md
   - Ubuntu: ubuntu.md

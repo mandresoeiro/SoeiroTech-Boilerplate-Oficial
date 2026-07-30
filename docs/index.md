@@ -15,6 +15,7 @@ Use este template para criar novos projetos com:
 
 ## Documentos principais
 
+- `guia-criar-e-subir-projeto.md`: passo a passo para criar um novo projeto e publicar no GitHub.
 - `engenharia-software.md`: documento de engenharia do projeto.
 - `roadmap.md`: proximas melhorias planejadas.
 - `ubuntu.md`: guia para rodar em Ubuntu, WSL e Docker.
